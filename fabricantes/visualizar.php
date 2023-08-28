@@ -26,6 +26,10 @@ $quantidade = count($listaDeFabricantes);
     <p><a href="inserir.php">
         Inserir novo fabricante</a></p>
 
+    <?php if(isset($_GET['status']) && $_GET["status"] === "sucesso"){ ?>
+        <h2 style="color:blue"> Fabricante atualizado com sucesso! </h2>
+
+    <?php } ?>
     
     <table>
         <caption>Lista de Fabricantes: <b><?=$quantidade?></b></caption>
@@ -48,12 +52,13 @@ A URL do href precisa de parâmetro com dados
 dinâmicos (no caso, o ID de cada fabricante) -->
 <a href="atualizar.php?id=<?=$fabricante["id"]?>">Editar</a>
 
-                    <a href="">Excluir</a>
+                    <a class="excluir" href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a>
                 </td>
             </tr>
 <?php } ?>
         </tbody>
     </table>
 
+    <script src="../js/confirma-exclusao.js"> </script>
 </body>
 </html>
