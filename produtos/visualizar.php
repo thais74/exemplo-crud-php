@@ -39,7 +39,7 @@ $listaDeProdutos = lerProdutos($conexao);
     <hr>
     <h2>Lendo e carregando todos os produtos.</h2>
 
-    <p><a href="inserir.php"></a> Inserir novo produto</p>
+    <p> <a href="inserir.php">Inserir novo produto</a> </p>
 
     <div class = "produtos">
 
