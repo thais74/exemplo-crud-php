@@ -53,7 +53,7 @@ $listaDeProdutos = lerProdutos($conexao);
                 <p>
                     <a href="atualizar.php?id=<?=$produto["id"]?>">Editar </a>
                      |
-                    <a href="apagar.php">Excluir</a>
+                    <a href="apagar.php?id=<?=$produto["id"]?>">Excluir</a>
                 </p>
             </article>
         <?php } ?> 

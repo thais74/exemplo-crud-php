@@ -42,7 +42,8 @@ $produtos = lerUmProduto($conexao, $id);
 
             <option value=""></option>
             <?php foreach($fabricantes as $fabricante) { ?>
-                <option value="<?=$fabricante["id"]?>"><?=$fabricante["nome"]?></option>
+                <option <?php if($produtos["fabricante_id"] === $fabricante["id"]) echo " selected" ; ?> 
+                value="<?=$fabricante["id"]?>"><?=$fabricante["nome"]?></option>
             <?php } ?>
             
             </select>
