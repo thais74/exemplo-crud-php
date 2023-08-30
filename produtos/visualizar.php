@@ -51,8 +51,8 @@ $listaDeProdutos = lerProdutos($conexao);
                 <p><b>Quantidade:</b>   <?=$produto["quantidade"]?></p>
                 <p><b>Total:</b> <?=formatarPreco($produto["preco"] * $produto["quantidade"])?></p>
                 <p>
-                    <a href="atualizar.php?">Editar </a>
-            
+                    <a href="atualizar.php?id=<?=$produto["id"]?>">Editar </a>
+                     |
                     <a href="apagar.php">Excluir</a>
                 </p>
             </article>
