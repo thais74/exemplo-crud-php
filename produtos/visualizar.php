@@ -50,14 +50,13 @@ $listaDeProdutos = lerProdutos($conexao);
                 <p><b>Preço:</b>  <?=formatarPreco($produto["preco"])?></p>
                 <p><b>Quantidade:</b>   <?=$produto["quantidade"]?></p>
                 <p><b>Total:</b> <?=formatarPreco($produto["preco"] * $produto["quantidade"])?></p>
+                <p>
+                    <a href="atualizar.php?">Editar </a>
+            
+                    <a href="apagar.php">Excluir</a>
+                </p>
             </article>
         <?php } ?> 
-
-        <article class= "produto">
-            <h3>Nome do produto....</h3>
-            <p><b>Preço</b>....</p>
-            <p><b>Quantidade</b>....</p>
-        </article>
 
     </div>
 
