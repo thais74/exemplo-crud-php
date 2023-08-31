@@ -14,12 +14,12 @@ if (isset($_POST['atualizar'])){
 
     $quantidade = filter_input(INPUT_POST, "quantidade", FILTER_SANITIZE_NUMBER_INT);
 
-    $fabricanteId = filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_NUMBER_INT);
-
     $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
 
+    $fabricanteId = filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_NUMBER_INT);
+
     atualizarProduto(
-        $conexao, $id, $nome, $quantidade, $descricao, $fabricanteId
+        $conexao, $id, $nome, $preco, $quantidade, $descricao, $fabricanteId
     );
 
     header("location:visualizar.php");
