@@ -71,4 +71,17 @@ function inserirProduto(PDO $conexao, string $nome,  float $preco, int $quantida
         die("Erro ao inserir: ".$erro->getMessage());
     }
 }
+
+function atualizarProduto(PDO $conexao, int $id, string $nome,  float $preco, int $quantidade, string $descricao, int $fabricanteId):void{
+    $sql = "UPDATE produtos SET nome = :nome WHERE id= :id";
+    
+    try{
+        $consulta = $conexao->prepare($sql);
+        $consulta->bindValue(":nome", $nome, PDO::PARAM_STR);   
+        $consulta->bindValue(":id", $id, PDO::PARAM_INT);   
+        $consulta->execute(); 
+    }catch (Exception $erro) {
+        die("Erro ao atualizar: ".$erro->getMessage());
+    }
+}
 ?>
