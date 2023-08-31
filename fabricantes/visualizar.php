@@ -14,8 +14,12 @@ $quantidade = count($listaDeFabricantes);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricantes - Visualização</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
+
+    <div class="container-md">
+    <br>
     <h1>Fabricantes | SELECT - 
         <a href="../index.php">Home</a>
     </h1>
@@ -59,6 +63,8 @@ dinâmicos (no caso, o ID de cada fabricante) -->
         </tbody>
     </table>
 
+    </div>
+    
     <script src="../js/confirma-exclusao.js"> </script>
 </body>
 </html>
